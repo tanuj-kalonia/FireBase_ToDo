@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&display=swap");
 
 * {
   padding: 0;
@@ -66,10 +66,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 22px;
   padding: 1rem;
 }
 
@@ -84,14 +82,136 @@
 .AddNewTodo .btn button {
   width: 100%;
   height: 100%;
-  border: none;
+  border: 1px solid #0b56f3;
+  background-color: #fff;
   border-radius: 8px;
-  background-color: #18a582;
-  color: white;
-  font-weight: 600;
+  color: #0b56f3;
   cursor: pointer;
 }
 .AddNewTodo .btn button:hover {
-  filter: brightness(1.2);
+  background-color: #0b56f3;
+  color: white;
   transition: 0.3s;
+}
+
+/* styles for form */
+.AddNewTodo form {
+  padding: 1rem 1rem 30px 1rem;
+  width: 300px;
+  /* border-radius: 32px; */
+}
+.AddNewTodo form .text {
+  position: relative;
+}
+.AddNewTodo form .text input {
+  padding: 0.5rem;
+  height: 2.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+}
+
+.AddNewTodo form .text input:focus {
+  outline: none;
+  border: 1px solid #0b56f3;
+}
+
+.AddNewTodo form .remind {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.AddNewTodo form p {
+  margin-left: 10px;
+}
+.AddNewTodo form .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.AddNewTodo form .pick-day,
+.pick-time {
+  padding: 1rem;
+}
+.AddNewTodo form .pick-project {
+  padding: 0.5rem;
+}
+.AddNewTodo form .pick-project .projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 0 1rem;
+}
+.AddNewTodo form .pick-project .projects .project {
+  border: 1px solid #0b56f3;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.AddNewTodo form .pick-project .projects .active {
+  border: none;
+  background-color: #0b56f3;
+  color: white;
+}
+.AddNewTodo form .cancel {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.AddNewTodo form .confirm {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.AddNewTodo form .confirm button {
+  width: 100%;
+  height: 40px;
+  background-color: #0b56f3;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 0 0 22px 22px;
+  cursor: pointer;
+}
+
+/* Calender  */
+.Calender {
+  padding: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+.Calender .header {
+  display: flex;
+  align-items: center;
+}
+.Calender .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.Calender .header .title p {
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+.Calender .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25p;
+  height: 25p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+}
+.Calender .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: 0.3s ease-in-out;
+}
+.Calender .items .item {
+  margin: 1rem;
 }
