@@ -1,12 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600;700&display=swap");
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Karla", sans-serif;
 }
-
+.tag-btn {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25p;
+  height: 25p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem;
+}
+.tag-btn:hover {
+  background-color: #ebebeb;
+  transition: 0.3s ease-in-out;
+}
 .App {
   display: flex;
   width: 100vw;
@@ -198,20 +209,76 @@
   margin-left: 5px;
   font-size: 0.9rem;
 }
-.Calender .header .btns span {
-  border-radius: 50%;
+
+.Calender .items .item {
+  margin: 1rem;
+}
+
+/* projects */
+.projects {
+  padding: 1rem;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.projects .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.projects .header .title p {
+  margin-left: 5px;
+  font-size: 0.9rem;
+}
+.projects .header .btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* single project */
+.Project {
+  display: flex;
+  padding: 0.1rem 0;
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.Project .name {
   cursor: pointer;
-  width: 25p;
-  height: 25p;
+}
+.Project .btns,
+.Project .btns .edit-delete {
+  display: flex;
+  align-items: center;
+}
+
+.Project .btns .edit-delete > span {
+  padding: 0.4rem;
+  margin: 0 2px;
+}
+.Project .btns .edit-delete .edit:hover {
+  background-color: #dee6f8;
+  color: royalblue;
+}
+.Project .btns .edit-delete .delete:hover {
+  background-color: #f1c3c2;
+  color: rgb(255, 0, 0);
+}
+.Project .btns .total-todos {
+  background-color: #ebebeb;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.1rem;
-}
-.Calender .header .btns span:hover {
-  background-color: #ebebeb;
-  transition: 0.3s ease-in-out;
-}
-.Calender .items .item {
-  margin: 1rem;
+  font-size: 0.8rem;
+  font-weight: 100;
 }

@@ -12,7 +12,7 @@ const Calender = () => {
                     <p>Calendar</p>
                 </div>
                 <div className="btns">
-                    <span>
+                    <span className='tag-btn'>
                         <CaretUp size={'20'} />
                     </span>
                 </div>
