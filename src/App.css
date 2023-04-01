@@ -240,6 +240,13 @@
   align-items: center;
   justify-content: space-between;
 }
+.projects .header .btns span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  justify-content: center;
+}
 
 /* single project */
 .Project {
@@ -281,4 +288,53 @@
   justify-content: center;
   font-size: 0.8rem;
   font-weight: 100;
+}
+
+/* Rename and add new project */
+.ProjectForm {
+  /* border: 1px solid; */
+  background-color: white;
+  position: relative;
+  padding-bottom: 40px;
+  width: 15rem;
+}
+.ProjectForm input {
+  width: 100%;
+  height: 40px;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border: 1px solid #949494;
+  border-radius: 6px;
+}
+.ProjectForm input:focus {
+  outline: none;
+  border: 1px solid #0b56f3;
+}
+.ProjectForm button {
+  position: absolute;
+  height: 40px;
+  width: 49%;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.ProjectForm .cancel {
+  left: 0;
+  bottom: 0;
+  border: none;
+}
+.ProjectForm .cancel:hover {
+  background-color: #f89a9a;
+}
+.ProjectForm .confirm {
+  right: 0;
+  bottom: 0;
+  border: 0px solid #0b56f3;
+  background-color: rgb(215, 226, 254);
+}
+.ProjectForm .confirm:hover {
+  background-color: #0b56f3;
+  border: none;
+  color: white;
 }

@@ -1,7 +1,11 @@
 import React from 'react'
+import Modal from './Modal';
+import RenameProject from './RenameProject';
 import { Pencil, XCircle } from 'react-bootstrap-icons'
 
+
 const Project = ({ project, edit }) => {
+    const [showModel, setshowModel] = React.useState(false)
     return (
         <div className="Project">
             <div className="name">
@@ -12,7 +16,8 @@ const Project = ({ project, edit }) => {
                 {
                     edit ?
                         <div className="edit-delete">
-                            <span className='edit tag-btn'>
+                            <span className='edit tag-btn'
+                                onClick={() => setshowModel(true)}>
                                 <Pencil size={'13'} />
                             </span>
                             <span className='delete tag-btn'>
@@ -30,6 +35,12 @@ const Project = ({ project, edit }) => {
                 }
             </div>
 
+            <Modal showModel={showModel}>
+                <RenameProject
+                    project={project}
+                    setShowModel={setshowModel}
+                />
+            </Modal>
 
         </div>
     )
