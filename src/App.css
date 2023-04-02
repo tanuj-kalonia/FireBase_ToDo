@@ -109,15 +109,15 @@
 }
 
 /* styles for form */
-.AddNewTodo form {
+.TodoForm {
   padding: 1rem 1rem 30px 1rem;
   width: 300px;
   /* border-radius: 32px; */
 }
-.AddNewTodo form .text {
+.TodoForm .text {
   position: relative;
 }
-.AddNewTodo form .text input {
+.TodoForm .text input {
   padding: 0.5rem;
   height: 2.5rem;
   width: 100%;
@@ -127,37 +127,37 @@
   border-radius: 6px;
 }
 
-.AddNewTodo form .text input:focus {
+.TodoForm .text input:focus {
   outline: none;
   border: 1px solid #0b56f3;
 }
 
-.AddNewTodo form .remind {
+.TodoForm .remind {
   display: flex;
   align-items: center;
   padding: 0.5rem;
 }
-.AddNewTodo form p {
+.TodoForm p {
   margin-left: 10px;
 }
-.AddNewTodo form .title {
+.TodoForm .title {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
-.AddNewTodo form .pick-day,
+.TodoForm .pick-day,
 .pick-time {
   padding: 1rem;
 }
-.AddNewTodo form .pick-project {
+.TodoForm .pick-project {
   padding: 0.5rem;
 }
-.AddNewTodo form .pick-project .projects {
+.TodoForm .pick-project .projects {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem 1rem 0 1rem;
 }
-.AddNewTodo form .pick-project .projects .project {
+.TodoForm .pick-project .projects .project {
   border: 1px solid #0b56f3;
   border-radius: 12px;
   padding: 5px 10px;
@@ -165,25 +165,25 @@
   cursor: pointer;
   font-size: 12px;
 }
-.AddNewTodo form .pick-project .projects .active {
+.TodoForm .pick-project .projects .active {
   border: none;
   background-color: #0b56f3;
   color: white;
 }
-.AddNewTodo form .cancel {
+.TodoForm .cancel {
   position: absolute;
   top: 5px;
   right: 10px;
   cursor: pointer;
 }
 
-.AddNewTodo form .confirm {
+.TodoForm .confirm {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-.AddNewTodo form .confirm button {
+.TodoForm .confirm button {
   width: 100%;
   height: 40px;
   background-color: #0b56f3;
@@ -402,4 +402,24 @@
 }
 .Todo .todo-container .text .line-through {
   width: 100%;
+}
+
+.EditTodo {
+  position: absolute;
+  bottom: 40px;
+  left: calc(40px + 400px + 40px);
+
+  background-color: white;
+  height: 80%;
+  width: 400px;
+  border-radius: 10px;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  opacity: 0.8;
+}
+
+.EditTodo .header {
+  margin: 1rem 0.5rem -0.5rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
 }
