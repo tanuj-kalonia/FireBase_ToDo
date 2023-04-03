@@ -1,19 +1,19 @@
 import React from 'react'
-import { Bell, CalendarDay, Clock, Palette, X } from "react-bootstrap-icons"
 
-import { MuiPickersUtilsProvider, DatePicker, TimePicker } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
 import Modal from './Modal';
 import TodoForm from './TodoForm'
-import { setDay, setQuarter } from 'date-fns';
+import { TodoContext } from '../context/index'
 
 
 const AddNewTodo = () => {
+    // context
+    const { selectedProject } = React.useContext(TodoContext)
 
     const [showModal, setshowModal] = React.useState(false);
     const [text, setText] = React.useState("");
     const [time, setTime] = React.useState(new Date());
     const [day, setDay] = React.useState(new Date());
+    const [todoProject, setTodoProject] = React.useState(selectedProject);
 
     const projects = [
         { id: 0, name: 'Personal', numOfTodos: 0 },
@@ -24,6 +24,11 @@ const AddNewTodo = () => {
     function handleSubmit(e) {
         console.log("clicked");
     }
+
+    React.useEffect(() => {
+        setTodoProject(selectedProject);
+    }, [selectedProject]);
+
     return (
         <div className='AddNewTodo'>
 
@@ -41,6 +46,8 @@ const AddNewTodo = () => {
                     setDay={setDay}
                     time={time}
                     setTime={setTime}
+                    todoProject={todoProject}
+                    setTodoProject={setTodoProject}
                     projects={projects}
                     showButtons={true}
                     setShowModal={setshowModal}

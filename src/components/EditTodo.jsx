@@ -2,10 +2,11 @@ import React from 'react'
 import TodoForm from './TodoForm';
 
 const EditTodo = () => {
-    const [showModal, setshowModal] = React.useState(false);
+
     const [text, setText] = React.useState("");
     const [time, setTime] = React.useState(new Date());
     const [day, setDay] = React.useState(new Date());
+    const [todoProject, setTodoProject] = React.useState();
 
     const projects = [
         { id: 0, name: 'Personal', numOfTodos: 0 },
@@ -31,6 +32,8 @@ const EditTodo = () => {
                     setDay={setDay}
                     time={time}
                     setTime={setTime}
+                    todoProject={todoProject}
+                    setTodoProject={setTodoProject}
                     projects={projects}
                 />
             </div>

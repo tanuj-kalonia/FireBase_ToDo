@@ -2,13 +2,21 @@ import React from 'react'
 import Modal from './Modal';
 import RenameProject from './RenameProject';
 import { Pencil, XCircle } from 'react-bootstrap-icons'
+import { TodoContext } from '../context';
 
 
 const Project = ({ project, edit }) => {
+    // Context -> global state
+    const { setSelectedProject } = React.useContext(TodoContext);
+
+    // state
     const [showModel, setshowModel] = React.useState(false)
     return (
         <div className="Project">
-            <div className="name">
+            <div
+                className="name"
+                onClick={() => setSelectedProject(project.name)}
+            >
                 {project.name}
             </div>
 

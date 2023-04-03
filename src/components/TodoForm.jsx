@@ -12,6 +12,7 @@ const TodoForm = ({
     text, setText,
     day, setDay,
     time, setTime,
+    todoProject, setTodoProject,
     projects,
     showButtons = false,
     setShowModal = false
@@ -71,11 +72,20 @@ const TodoForm = ({
                     </div>
                     <div className="projects">
                         {
-                            projects.map(project =>
-                                <div className="project" key={project.id}>
-                                    {project.name}
+                            projects.length > 0 ?
+                                projects.map(project =>
+                                    <div
+                                        className={`project ${todoProject === project.name ? 'active' : ''}`}
+                                        key={project.id}
+                                        onClick={() => setTodoProject(project.name)}
+                                    >
+                                        {project.name}
+                                    </div>
+                                )
+                                :
+                                <div className="noProject">
+                                    Please add a project before procedding !
                                 </div>
-                            )
                         }
                     </div>
                 </div>
@@ -95,7 +105,7 @@ const TodoForm = ({
 
 
             </form>
-        </MuiPickersUtilsProvider>
+        </MuiPickersUtilsProvider >
 
     )
 }

@@ -1,9 +1,13 @@
 import React from 'react'
 import Todo from './Todo'
 import Next7Days from './Next7Days';
+import { TodoContext } from '../context';
 
 const Todos = () => {
-    const selectedProject = 'today';
+    // We are passing TodoContext in the useContext
+    // Hence whatever is exported in the TodoConext will be used here
+    // This will return the object that contains the values obj
+    const { selectedProject } = React.useContext(TodoContext);
 
     const todos = [
         {
@@ -29,6 +33,7 @@ const Todos = () => {
 
         }
     ]
+
     return (
         <div className="Todos">
             <div className="selected-project">
